@@ -1,8 +1,6 @@
 import streamlit as st
-from random import random, randint
+import random
 import datetime
-from os.path import exists
-from math import sqrt
 
 
 def run():
@@ -34,9 +32,11 @@ def run():
 
     button = st.button('Узнать совместимость')
     if str(man) == "2007-03-21" and str(girl) == "2005-04-26":
-
-        st.text(f"Ваша совместимость {1}")
+        st.text(f"Ваша совместимость {100}%")
     else:
-        st.text(f"Ваша совместимость {2}")
+        seed = int((str(man) + str(girl)).replace("-", ""))
+        random.seed(seed)
+        n = random.randint(0, 100)
+        st.text(f"Ваша совместимость {n}%")
 
 run()
