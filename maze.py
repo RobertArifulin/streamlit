@@ -29,8 +29,8 @@ def run():
     st.title('Совместимость пары')
     st.write('Введите даты рождения')
 
-    man = st.date_input("Его дата рождения", datetime.date(1990, 1, 1))
-    girl = st.date_input("Её дата рождения", datetime.date(1990, 1, 1))
+    man = st.date_input("Его дата рождения", datetime.date(2000, 1, 1))
+    girl = st.date_input("Её дата рождения", datetime.date(2000, 1, 1))
 
     button = st.button('Узнать совместимость')
     if str(man) == "2007-03-21" and str(girl) == "2005-04-26":
