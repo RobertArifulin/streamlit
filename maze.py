@@ -30,13 +30,13 @@ def run():
     man = st.date_input("Его дата рождения", datetime.date(2000, 1, 1))
     girl = st.date_input("Её дата рождения", datetime.date(2000, 1, 1))
 
-    button = st.button('Узнать совместимость')
-    if str(man) == "2007-03-21" and str(girl) == "2005-04-26":
-        st.text(f"Ваша совместимость {100}%")
-    else:
-        seed = int((str(man) + str(girl)).replace("-", ""))
-        random.seed(seed)
-        n = random.randint(0, 100)
-        st.text(f"Ваша совместимость {n}%")
+    if st.button('Узнать совместимость'):
+        if str(man) == "2007-03-21" and str(girl) == "2005-04-26":
+            st.text(f"Ваша совместимость {100}%")
+        else:
+            seed = int((str(man) + str(girl)).replace("-", ""))
+            random.seed(seed)
+            n = random.randint(0, 100)
+            st.text(f"Ваша совместимость {n}%")
 
 run()
