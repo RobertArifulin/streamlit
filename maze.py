@@ -33,6 +33,10 @@ def run():
     girl = st.date_input("Её дата рождения", datetime.date(1990, 1, 1))
 
     button = st.button('Узнать совместимость')
+    if str(man) == "2007-03-21" and str(girl) == "2005-04-26":
 
+        st.text(f"Ваша совместимость {1}")
+    else:
+        st.text(f"Ваша совместимость {2}")
 
 run()
